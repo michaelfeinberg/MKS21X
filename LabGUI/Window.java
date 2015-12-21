@@ -31,10 +31,10 @@ public class Window extends JFrame implements ActionListener{
 	pane.add(T);
 	pane.add(L);
     }
-    public static int CToF(int temp){
+    public static int FToC(int temp){
 	return (int)((temp-32)*5/9);
     }
-    public static int FToC(int temp){
+    public static int CToF(int temp){
 	return (int)((9*temp/5)+32);
     }
     public void actionPerformed(ActionEvent e){
