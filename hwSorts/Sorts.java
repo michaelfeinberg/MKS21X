@@ -35,9 +35,28 @@ public class Sorts{
 	}
 	return data;
     }
+    
+    public static int[] bubbleSort(int[] data){
+	
+	int holder;
+	int x = 0;
+	do{
+	    for(int j = 0;j<data.length-x-1;j++){
+		
+		if(data[j]>data[j+1]){
+		    holder = data[j];
+		    data[j] = data[j+1];
+		    data[j+1]=holder;
+		    
+		}
+	    }
+	    x++;
+	}while(x<data.length-1);
+	return data;
+    }
 
     public static void main(String[]args){
-	int[] a = {8,0,4,3,6,6,7,-1,3,4,8,123,234};
+	int[] a = {8,0,4,3,6,6,7,234,-1,3,4,8,123};
 	int[] b = {8,-2,-1};
 	/*Sorts.printArray(a);
 	Sorts.insertionSort(a);
@@ -46,7 +65,7 @@ public class Sorts{
 	Sorts.printArray(b);
 	*/
 	Sorts.printArray(a);
-	Sorts.selectionSort(a);
+	Sorts.bubbleSort(a);
 	Sorts.printArray(a);
     }
 }
